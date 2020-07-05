@@ -7,21 +7,26 @@ function mycontroller($scope){
   $scope.stringarr="";
   $scope.checkstr = function (){
     var arr= $scope.stringarr.split(',');
-    var result = arr.filter(arr => arr.trim().length > 0);
-    if(result.length === 0)
-    {
-      $scope.messages="Please enter the data first";
-    }
-    else{
-    if(result.length <=3 )
-    {
-       $scope.messages = "Enjoy!";
-    }
-    if(result.length > 3)
-    {
-       $scope.messages = "Too Much!";
-    }
-  }
+    $scope.result = arr.filter(arr => arr.trim().length > 0);
+    $scope.arrlength = $scope.result.length;
+  //   if(result.length === 0)
+  //   {
+  //     $scope.messages="Please enter the data first";
+  //     return 0;
+  //   }
+  //   else{
+  //   if(result.length <=3 )
+  //   {
+  //      $scope.messages = "Enjoy!";
+  //      return 1;
+  //   }
+  //   if(result.length > 3)
+  //   {
+  //      $scope.messages = "Too Much!";
+  //      return 2;
+  //   }
+  // }
+  $scope.messages = $scope.arrlength ? $scope.arrlength >3 ? 'Too much!' : 'Enjoy!' : 'Please enter data first';
   };
 }
 })();
