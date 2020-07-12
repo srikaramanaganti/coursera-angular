@@ -1,0 +1,12 @@
+{
+	"IIFE": {
+	"prefix": "iife",
+	"body": [
+	  "(function (){",
+	  "'use strict';",
+	  "angular.module('$1',[]).controller('$2',$3);",
+	  "})();"
+	],
+	"description": "angular snipet"
+  }
+}
